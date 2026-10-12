@@ -1,8 +1,13 @@
 {
-  "liga": 30332,
   "minutos_entre_revisiones": 5,
-  "personas": [
-    {"nombre": "Manel", "equipo": "Boston Celtics", "equipo_id": 159873},
-    {"nombre": "Amigo", "equipo": "Seattle Supersonics", "equipo_id": 159713}
+  "ligas": [
+    {
+      "id": 30332,
+      "nombre": "Master Of Dinastys",
+      "equipos": [
+        {"persona": "Manel", "equipo_id": 159873},
+        {"persona": "Amigo", "equipo_id": 159713}
+      ]
+    }
   ]
 }
