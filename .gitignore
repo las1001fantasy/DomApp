@@ -2,3 +2,4 @@ __pycache__/
 liga_*.json
 estado.json
 estado.json.tmp
+canales.json
