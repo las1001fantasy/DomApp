@@ -33,3 +33,19 @@ python3 vigilante.py             # se queda vigilando sin parar
 La primera vez se crea `canales.json` con un canal secreto de ntfy para cada persona. No se sube a GitHub, porque en ntfy cualquiera que conozca el nombre del canal puede leerlo. Cada persona instala la app **ntfy** (Android o iPhone), pulsa **+** y se suscribe a su canal.
 
 La primera revisión solo guarda el estado de cada jugador en `estado.json`. A partir de ahí, cuando un jugador de un equipo vigilado pasa de sano a lesionado (DTD, OUT, IR...) o cambia de un tipo de lesión a otro, su dueño recibe una notificación con el jugador, el estado, la liga, el equipo y la lesión. Las recuperaciones y los fichajes nuevos no generan aviso.
+
+## Paso 4: funcionando 24/7
+
+En la VM, desde la carpeta DomApp y con tu usuario normal:
+
+```
+bash instalar_servicio.sh
+```
+
+Instala el vigilante como servicio del sistema: arranca solo al encender la VM, se reinicia si falla y guarda un registro.
+
+```
+journalctl -u domapp -f            # ver el registro en directo (Ctrl+C para salir)
+systemctl status domapp            # ver si está funcionando
+sudo systemctl restart domapp      # aplicar cambios después de un git pull o de editar config.json
+```
