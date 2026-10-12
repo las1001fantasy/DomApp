@@ -1,0 +1,8 @@
+{
+  "liga": 30332,
+  "minutos_entre_revisiones": 5,
+  "personas": [
+    {"nombre": "Manel", "equipo": "Boston Celtics", "equipo_id": 159873},
+    {"nombre": "Amigo", "equipo": "Seattle Supersonics", "equipo_id": 159713}
+  ]
+}
